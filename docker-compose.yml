@@ -6,5 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     working_dir: /home
+    ports:
+      - 80:80
     volumes:
       - ./:/home
