@@ -1,0 +1,10 @@
+version: '2'
+services:
+  gofabric8:
+    image: gofabric8
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /home
+    volumes:
+      - ./:/home
