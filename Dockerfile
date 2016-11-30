@@ -2,7 +2,7 @@ FROM alpine
 
 RUN apk update
 RUN apk upgrade
-RUN apk --update add wget curl bash unzip python php5-common php5 php5-mysql php5-cli php5-cgi openssh-client openssl
+RUN apk --update add wget curl bash unzip python php5-common php5 php5-mysql php5-cli php5-cgi openssh-client openssl ca-certificates
 
 # http://get.docker.com/builds/Linux/x86_64/docker-1.12.3.tgz
 ENV COMPACT_DOCKER ./vendor/docker-1.12.3.tgz
@@ -56,6 +56,5 @@ RUN apk del wget curl unzip bash
 
 # ENTRYPOINT ["gofabric8"]
 # CMD ["gofabric8"]
-# CMD
 VOLUME ["/.config", "/.kube", "/.kubecfg", "/.ssh"]
 CMD ["/bin/sh"]
