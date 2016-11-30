@@ -1,10 +1,11 @@
 version: '2'
 services:
   gofabric8:
-    image: gofabric8
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: yurifl/gofabric8
+    build: .
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile.test
     working_dir: /home
     ports:
       - 80:80
